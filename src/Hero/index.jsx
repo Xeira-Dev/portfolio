@@ -1,8 +1,8 @@
 import './index.scss';
 import { TypeAnimation } from 'react-type-animation';
-const webIcon = 'assets/web-development-svgrepo-com.svg';
-const teamworkIcon = 'assets/teamwork-svgrepo-com.svg';
-const growthIcon = 'assets/growth-svgrepo-com.svg';
+const webIcon = 'web-development-svgrepo-com.svg';
+const teamworkIcon = 'teamwork-svgrepo-com.svg';
+const growthIcon = 'growth-svgrepo-com.svg';
 
 const Hero = () => {
 	return (
