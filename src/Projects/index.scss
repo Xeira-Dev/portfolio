@@ -1,0 +1,125 @@
+section.projects {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+
+	.container {
+		flex-grow: 1;
+		padding: 1rem;
+		background: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(25px);
+		border-radius: 1rem;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+		.bento {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: auto;
+			gap: 1rem;
+			transform: rotate3d(0, 0, 0);
+			transition: transform 0.3s ease-in-out;
+
+			.item {
+				height: 200px;
+				border-radius: 1rem;
+				box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+				background: rgba(0, 0, 0, 0.8);
+				transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				overflow: hidden;
+
+				&:nth-child(1) {
+					grid-column: span 2;
+
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					h3 {
+						font-size: 1.5rem;
+					}
+					p {
+						font-size: 1.2rem;
+					}
+				}
+
+				&:nth-child(2) {
+					grid-column: span 3;
+				}
+
+				&:nth-child(3) {
+					grid-column: span 3;
+				}
+
+				&:nth-child(4) {
+					grid-column: span 2;
+					grid-column-end: 6;
+				}
+
+				&:hover {
+					background: rgba(0, 0, 0, 1);
+				}
+
+				&.left {
+					&:hover {
+						transform: translateX(-5px) rotate3d(1, 0, 0, 10deg) rotate3d(0, 1, 0, 5deg) scale(1.05);
+					}
+				}
+
+				&.right {
+					&:hover {
+						transform: translateX(5px) rotate3d(1, 0, 0, -10deg) rotate3d(0, 1, 0, 5deg) scale(1.05);
+					}
+				}
+
+				&.left,
+				&.right {
+					&.fliped {
+						transition-duration: 0.7s;
+						z-index: 1;
+						transform: rotate3d(1, 0, 0, 180deg) scale(1.2);
+						background: rgba(0, 0, 0, 1) !important;
+
+						.front {
+							opacity: 0;
+							display: none;
+							background: none;
+						}
+
+						.back {
+							transform: rotate3d(1, 0, 0, 180deg);
+							transition: opacity 0.3s ease-in-out;
+							opacity: 1;
+						}
+					}
+				}
+
+				.front {
+					height: 100%;
+					backdrop-filter: blur(5px);
+					box-shadow: inset 0 0 50px rgba(0, 0, 0, 1);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transition: all 0.3s ease-in-out, display 0s 0.3s;
+				}
+
+				.back {
+					display: flex;
+					align-items: center;
+					gap: 2rem;
+					height: 100%;
+					backdrop-filter: blur(5px);
+					opacity: 0;
+
+					img {
+						height: 100%;
+						border-radius: 1rem;
+					}
+
+					/* .text {
+					} */
+				}
+			}
+		}
+	}
+}

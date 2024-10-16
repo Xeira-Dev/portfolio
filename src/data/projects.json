@@ -1,0 +1,16 @@
+[
+	{
+		"id": 1,
+		"title": "Luvv7",
+		"description": "I made this for a friend. He's a Twitch streamer and he asked me to make a website where he could post articles/reviews of videogames.",
+		"technologies": [],
+		"image": "/Luvv7.png"
+	},
+	{
+		"id": 2,
+		"title": "One4All",
+		"description": "A way to search for movies/tv shows and immediately know on what platforms they're available on for you to stream, rent ou buy them!",
+		"technologies": [],
+		"image": "/One4All.png"
+	}
+]
